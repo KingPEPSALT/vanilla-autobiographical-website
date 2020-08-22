@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Asap&display=swap");
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  margin: 0;
+  background-image: url(background_dark.png);
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #37099a;
+  box-shadow: inset 0 0 5px 3px rgba(0, 0, 0, 0.75);
+  padding: 2px;
+}
+::-webkit-scrollbar-thumb {
+  background: black;
+  border-radius: 2px;
+  border: rgb(180, 180, 180), solid, 2px;
+}
+
+.sticky-bar {
+  width: 100%;
+  height: 52px;
+  top: 0px;
+  position: sticky;
+  z-index: 1;
+  border-top-width: 6px;
+  border-top-style: solid;
+  border-image: linear-gradient(
+    to right,
+    rgba(46, 0, 154, 1),
+    rgba(148, 0, 221, 1)
+  );
+  border-image-slice: 1;
+}
+
+.header-container {
+  background-color: #010101;
+  padding: 20px;
+  box-shadow: 0 0 30px 10px black;
+  user-select: none;
+}
+
+.header {
+  background: radial-gradient(
+      circle,
+      rgba(57, 0, 93, 0.9360119047619048) 0%,
+      rgba(13, 0, 57, 0.5214460784313726) 71%,
+      rgba(3, 0, 92, 0.09567577030812324) 100%
+    ),
+    url(header_background.jpg);
+  background-size: cover;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: inset 0 0 19px 15px #360055;
+}
+
+.header > img {
+  display: flex;
+  padding: 5px 12px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.navigation-bar {
+  float: right;
+  top: 0px;
+  right: 0px;
+  z-index: 1;
+  position: -webkit-sticky;
+  position: sticky;
+}
+.navigation-bar > a {
+  display: inline;
+  background-color: #010101;
+}
+.navigation-bar > a > div {
+  display: block;
+  float: left;
+  background-color: #010101;
+  padding: 10px;
+  box-sizing: content-box;
+  box-shadow: 0px 5px 30px -8px rgba(0, 0, 0, 1);
+  transition: background 400ms, border-radius 400ms, padding 400ms;
+}
+
+.navigation-bar > a:not(first-of-type) > div:hover {
+  border-bottom-right-radius: 8px;
+}
+.navigation-bar > a:not(last-of-type) > div:hover {
+  border-bottom-left-radius: 8px;
+}
+
+.navigation-bar > a > div:hover {
+  background-color: #353535;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.navigation-bar > a > div > img {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+}
+.navigation-bar > a > div {
+  color: white;
+  text-decoration: none;
+  font-family: "Asap", sans-serif;
+  padding-right: 4px;
+  vertical-align: middle;
+}
+.navigation-bar > a:first-of-type > div {
+  border-bottom-left-radius: 10px;
+}
+.navigation-bar > a:last-of-type > div {
+  padding-right: 10px;
+}
+.navigation-bar > a:last-of-type > div:hover {
+  padding-right: 10px;
+  border-bottom-right-radius: 0px;
+}
+.search-bar-container {
+  position: sticky;
+  top: 0px;
+  width: 300px;
+  padding: 1px;
+  border-bottom-right-radius: 6px;
+  background-color: #010101;
+  transition: border-radius 500ms, background 600ms;
+  box-shadow: 0px 5px 30px -8px rgba(0, 0, 0, 1);
+}
+.search-bar-container > div.search-bar {
+  padding: 4px;
+  margin: 7px;
+  transition: border-radius 500ms;
+  background-color: snow;
+  border-radius: 5px;
+}
+
+.search-bar-container > div.search-bar > input[type="text"] {
+  border: none;
+  outline: none;
+  font-family: "Asap", sans-serif;
+  font-size: 16px;
+  background-color: snow;
+  width: 190.31px;
+  height: 20px;
+  vertical-align: middle;
+}
+.search-bar-container > div.search-bar > img {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  padding-left: 6px;
+  vertical-align: middle;
+}
+
+.scrollable {
+  position: absolute;
+  width: 95px;
+  height: 95px;
+  right: -100px;
+  background-color: #1d1c1d;
+  transition: right 700ms;
+  position: relative;
+  color: white;
+  font-family: "Asap", sans-serif;
+  padding: 15px;
+  text-align: center;
+  border: rgb(132, 0, 255) solid 2px;
+  margin-bottom: -2px;
+}
+.scrollable:first-of-type {
+  border-top-left-radius: 15px;
+  height: 10px;
+  padding-left: 10px;
+  width: 100px;
+}
+.scrollable:last-of-type {
+  border-bottom-left-radius: 15px;
+}
+.scrollable > a > .avatar {
+  position: relative;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  border-bottom: white solid 2px;
+}
+.off-screen {
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  position: absolute;
+  right: 0px;
+  top: 240px;
+}
+
+.content {
+  float: right;
+  width: 65%;
+  padding-top: 50px;
+}
+.content > .rounded-article {
+  position: relative;
+  width: 40%;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 20px;
+  color: white;
+  text-align: justify;
+  font-family: "Asap", sans-serif;
+  border: 5px solid transparent;
+  background: #2a2a2a;
+  background-clip: padding-box;
+  border-style: solid;
+  margin-bottom: 50px;
+}
+
+.content > .rounded-article::after {
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+  background: linear-gradient(
+    130deg,
+    rgba(136, 0, 255, 1) 0%,
+    rgba(37, 0, 168, 1) 100%
+  );
+  content: "";
+  z-index: -1;
+  border-radius: 16px;
+}
+
+.content > .rounded-article > .article-header {
+  text-align: center;
+  display: block;
+  font-size: 20px;
+  font-weight: bolder;
+  padding-bottom: 5px;
+}
